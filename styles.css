@@ -14,6 +14,7 @@ body{
     background:var(--background);
 }
 
+/* Heading */
 .container{
     display: flex;
     justify-content: center;
@@ -36,4 +37,23 @@ body{
 .topline{
     color: white;
     font-size: var(--medium);
+}
+
+/* Image */
+.gif-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.gif{
+    border-radius: 1rem;
+    border: 2px solid black;
+    box-shadow: 0 0 10px black;
+    
+    transition: all .2s ease;
+}
+
+.gif:hover{
+    transform: scale(1.05);
+    cursor: pointer;
 }
