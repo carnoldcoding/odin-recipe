@@ -30,15 +30,79 @@ body{
 }
 
 .header{
+    position: relative;
     color: white;
     font-size: var(--large);
+
+    animation-name: header;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+
+    opacity: 0;
+}
+
+@keyframes header{
+    0%{
+        transform: translateX(-200px);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.header::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -.5rem;
+
+    background: white;
+
+    width: 100%;
+    height: 4px;
+    
+    animation-name: underline;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes underline{
+    100%{
+        transform: scaleX(1);
+    }
 }
 
 .topline{
     color: white;
     font-size: var(--medium);
+    
+    animation-name: topline;
+    animation-duration: 1.5s;
+    animation-delay: 3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    
+    opacity: 0;
+    margin: 1rem 0;
 }
 
+@keyframes topline {
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 /* Image */
 .gif-wrapper{
     display: flex;
@@ -50,10 +114,27 @@ body{
     border: 2px solid black;
     box-shadow: 0 0 10px black;
     
-    transition: all .2s ease;
+    transition: all .1.5s ease;
+
+    opacity: 0;
+
+    animation-name: gif;
+    animation-delay: 4.5s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
 
 .gif:hover{
     transform: scale(1.05);
     cursor: pointer;
+}
+
+@keyframes gif {
+    0%{
+        transform: translateY(200px);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
