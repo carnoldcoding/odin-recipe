@@ -145,3 +145,25 @@ body{
     gap: 1rem;
     width: 100%;
 }
+
+.button-wrapper{
+    font-size: var(--normal);
+    background: rgb(255, 166, 0);
+    padding: .5rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 3px black, inset 2px 2px 3px white;
+
+    transition: all .2s ease;
+    text-decoration: none;
+
+}
+
+.button-wrapper:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    background:rgb(255, 195, 83);
+}
+
+.button{
+    color: white;
+}
